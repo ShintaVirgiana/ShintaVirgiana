@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+
+    <style>
+        body{
+            background-color: rgb(0, 238, 255);
+        }
+
+        .heading{   
+            text-align: center;
+        }
+
+        button{
+            background-color: rgb(66, 138, 206);
+        }
+
+        footer{
+            text-align: center;
+        }
+
+        .tr{
+            background-color: rgb(130, 150, 41);
+            color: rgb(10, 10, 10);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">TEMAN TERBAIKKU</h1>
+    <table border="1" width="100%" class="table">
+        <tr class="tr">
+            <th>No.</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Aksi</th>
+        </tr>
+
+        <tr>
+            <td align="center">1</td>
+            <td align="center" onclick="hello()">41215669</td>
+            <td align="center" onclick="Resda()">Resda Dayanti</td>
+            <td align="center" onclick="alamat()">Garut</td>
+            <td align="center"><button onclick="popup()">Hapus</button></td>
+        </tr>
+
+        <tr>
+            <td align="center">2</td>
+            <td align="center" onclick="hello()">41215605</td>
+            <td align="center" onclick="siti()">Siti Wastopa Riandona</td>
+            <td align="center" onclick="alamat()">Garut</td>
+            <td align="center"><button onclick="popup()">Hapus</button></td>
+        </tr>
+
+        <tr>
+            <td align="center">3</td>
+            <td align="center" onclick="hello()">41215669</td>
+            <td align="center" onclick="novi()">Novi Amaliah</td>
+            <td align="center" onclick="alamat()">Tegal</td>
+            <td align="center"><button onclick="popup()">Hapus</button></td>
+        </tr>
+
+        <tr>
+            <td align="center">4</td>
+            <td align="center" onclick="hello()">41215576</td>
+            <td align="center" onclick="ayu()">Ayu Ningrat</td>
+            <td align="center" onclick="alamat()">Ciamis</td>
+            <td align="center"><button onclick="popup()">Hapus</button></td>
+        </tr>
+
+        <tr>
+            <td align="center">5</td>
+            <td align="center" onclick="hello()">41215662</td>
+            <td align="center" onclick="erna()">Erna Oktaviani</td>
+            <td align="center" onclick="alamat()">Cirebon</td>
+            <td align="center"><button onclick="popup()">Hapus</button></td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
