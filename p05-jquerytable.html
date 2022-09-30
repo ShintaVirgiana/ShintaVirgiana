@@ -1,0 +1,133 @@
+
+<center><h1>Temanku di IKMI</h1></center>
+<hr>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style>
+  body {
+    font-family: "Times New Roman";
+    font-size: 50pxpx;
+    background-color: rgb(240, 189, 78);
+  }
+
+  tr {
+    background: rgb(235, 115, 59);
+    padding: 2px solid;
+    text-align: center;
+
+  }
+  td {
+    background: rgb(221, 193, 160);
+    cursor: pointer;
+    transition: .3s;
+    padding: 2px solid;
+    text-align: center;
+  }
+  td:hover {
+    background: rgb(224, 228, 17);
+  }
+  .tabel1 {
+    width: 200%;
+    max-width: 500px;
+    margin: auto;
+
+  }
+</style>
+
+<table class="tabel1">
+  <tr>
+    <th>No</th>
+    <th>Nama Kawan</th>
+    <th>NIM</th>
+    <th>Alamat</th>
+    <th >Aksi</th>
+  </tr>
+  <tr id="row__1">
+    <td>1</td>
+    <td class="nama">Resda Dayanti</td>
+    <td class="NIM">41215669</td>
+    <td class="alamat">Garut</td>
+    <td class="hapus" id="hapus__1">Hapus</td>
+  </tr>
+  <tr id="row__2">
+    <td>2</td>
+    <td class="nama">Siti Wastopa Riandona</td>
+    <td class="NIM">41215605</td>
+    <td class="alamat">Garut</td>
+    <td class="hapus" id="hapus__2">Hapus</td>
+  </tr>
+  <tr id="row__3">
+    <td>3</td>
+    <td class="nama">Ayu Ningrat</td>
+    <td class="NIM">41215576</td>
+    <td class="alamat">Ciamis</td>
+    <td class="hapus" id="hapus__3">Hapus</td>
+  </tr>
+  <tr id="row__4">
+    <td>4</td>
+    <td class="nama">Novi Amaliah</td>
+    <td class="NIM">41215696</td>
+    <td class="alamat">Tegal</td>
+    <td class="hapus " id="hapus__4">Hapus</td>
+  </tr>
+  <tr id="row__5">
+    <td>5</td>
+    <td class="nama">Zahratul Jannah</td>
+    <td class="NIM">41215475</td>
+    <td class="alamat">Cirebon</td>
+    <td class="hapus" id="hapus__5">Hapus</td>
+  </tr>
+</table>
+
+<script>
+  $(document).ready(function(){
+     // alert(0)
+    $('.nama').click(function(){
+      // alert(1)
+      let isi = $(this).text();
+      // alert(isi);
+      let isi2 = prompt('Apakah anda ingin mengubahnya?:',isi);
+      if(!isi2) return;
+      // alert(isi2);
+
+      $(this).text(isi2);
+    })
+
+    $('.alamat').click(function(){
+     // alert(1)
+     let isi = $(this).text();
+     // alert(isi);
+     let isi2 = prompt('Apakah anda ingin mengubahnya?:',isi);
+     if(!isi2) return;
+     // alert(isi2);
+
+     $(this).text(isi2);
+    })
+
+
+    $('.hapus').click(function(){
+      // alert(1)
+     let betul = confirm('Anda yakin ingin menghapusnya?');
+     if(!betul) return;
+
+     let id = $(this).prop('id');
+     // alert(id);
+
+
+     let rid = id.split('__');
+     let baris_ke = rid[1];
+
+     // alert(baris_ke);
+
+     $('#row__'+baris_ke).slideUp()
+
+
+
+     // alert('Anda yakin')
+
+
+    })
+
+  })
+</script>
